@@ -19,6 +19,11 @@ public class StudentController {
 	@Autowired
 	private StudentRepository studentRepository;
 	
+	@GetMapping("/msg")
+	public String testingApi() {
+		return "Docker-Spring-Task Running";
+	}
+	
 	@GetMapping
 	public List<Student> getAllStudent(){
 		return studentRepository.findAll();
